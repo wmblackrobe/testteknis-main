@@ -2,8 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pengaduan extends CI_Controller{
-    private $alert ='';
-
+    
     public function __construct(){
         parent::__construct();
        
@@ -89,7 +88,7 @@ public function template($content,$data=null){
    public function hapus(){
     
     if($this->uri->segment(3)) $this->pengaduanModel->delete(array('id_pengaduan'=>$this->uri->segment(3)));
-   $this->alert("Data ber hasil dihapus");
+
     redirect('pengaduan');
 }
 
